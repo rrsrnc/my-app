@@ -15,9 +15,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "install-python": "curl https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe --output python-installer.exe && python-installer.exe /quiet InstallAllUsers=1 PrependPath=1 && pip install scikit-learn",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
+    "start": "npm run install-python && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
