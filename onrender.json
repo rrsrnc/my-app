@@ -1,9 +1,10 @@
 {
     "install": {
       "commands": [
-        "curl https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe --output python-installer.exe",
-        "python-installer.exe /quiet InstallAllUsers=1 PrependPath=1",
-        "pip install scikit-learn"
+        "apt-get update",
+        "apt-get install -y python3 python3-pip",
+        "pip3 install scikit-learn",
+        "npm install"
       ]
     },
     "build": {
